@@ -3,8 +3,6 @@
 // Types
 type Props = {}
 
-export default function Example({}:Props) {
-  return (
-    <div className="">Example Component</div>
-  )
+export default function Example({}: Props) {
+  return <div className="">Example Component</div>
 }

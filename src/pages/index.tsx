@@ -1,15 +1,15 @@
 // Next
-import Head from 'next/head'
+import Head from "next/head"
 
 // Components
 import HomeTemplate from "@/components/templates/home"
 
 // Types
-import type { NextPage } from 'next'
+import type { NextPage } from "next"
 
 type Props = {}
 
-const Home: NextPage = ({}:Props) => {
+const Home: NextPage = ({}: Props) => {
   return (
     <>
       <Head>
