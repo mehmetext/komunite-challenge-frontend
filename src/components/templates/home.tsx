@@ -16,6 +16,7 @@ export type ITodo = {
 }
 
 export default function HomeTemplate({}: Props) {
+  const [todo, setTodo] = useState("")
   const [todos, setTodos] = useState<ITodo[]>([
     {
       done: true,
@@ -35,20 +36,24 @@ export default function HomeTemplate({}: Props) {
   }, [todos])
 
   const addTodo = () => {
-    setTodos([
-      {
-        done: false,
-        text: "text...",
-        id: uniqid(),
-      },
-      ...todos,
-    ])
+    let trimmed = todo.trim()
+    if (trimmed) {
+      setTodos([
+        {
+          done: false,
+          text: trimmed,
+          id: uniqid(),
+        },
+        ...todos,
+      ])
+    }
+    setTodo("")
   }
 
   return (
     <>
       <Header count={activeCount} />
-      <AddTodo />
+      <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
       <Todos todos={todos} />
     </>
   )
