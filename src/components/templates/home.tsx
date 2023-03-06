@@ -1,13 +1,15 @@
 // Components
-import Example from "@/components/organisms/example"
+import Header from "../organisms/Header"
 
 // Types
 type Props = {}
 
 export default function HomeTemplate({}: Props) {
   return (
-    <div className="">
-      <Example />
-    </div>
+    <>
+      <Header />
+      {/* <AddTodo /> */}
+      {/* <Todos /> */}
+    </>
   )
 }
