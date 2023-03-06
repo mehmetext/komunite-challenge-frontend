@@ -7,7 +7,7 @@ type Props = {}
 export default function HomeTemplate({}: Props) {
   return (
     <>
-      <Header />
+      <Header count={10} />
       {/* <AddTodo /> */}
       {/* <Todos /> */}
     </>
