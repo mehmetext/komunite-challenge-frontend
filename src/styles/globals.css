@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html,
-  body,
-  #__next {
-    @apply w-full h-full;
-  }
-
   body {
     @apply bg-slate-800 text-white;
   }
