@@ -17,18 +17,7 @@ export type ITodo = {
 
 export default function HomeTemplate({}: Props) {
   const [todo, setTodo] = useState("")
-  const [todos, setTodos] = useState<ITodo[]>([
-    {
-      done: true,
-      text: "Lorem ipsum...",
-      id: "1",
-    },
-    {
-      done: false,
-      text: "Lorem ipsum dolor sit amet...",
-      id: "2",
-    },
-  ])
+  const [todos, setTodos] = useState<ITodo[]>([])
   const [activeCount, setActiveCount] = useState(0)
 
   useEffect(() => {
