@@ -59,11 +59,15 @@ export default function HomeTemplate({}: Props) {
     )
   }
 
+  const deleteTodo = (id: string) => {
+    setTodos(todos.filter((todo) => todo.id != id))
+  }
+
   return (
     <>
       <Header count={activeCount} />
       <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
-      <Todos todos={todos} changeDone={changeDone} />
+      <Todos todos={todos} changeDone={changeDone} deleteTodo={deleteTodo} />
     </>
   )
 }
