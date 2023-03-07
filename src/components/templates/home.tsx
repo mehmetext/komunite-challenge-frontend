@@ -63,11 +63,25 @@ export default function HomeTemplate({}: Props) {
     setTodos(todos.filter((todo) => todo.id != id))
   }
 
+  const updateTodo = (id: string, text: string) => {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) todo.text = text
+        return todo
+      })
+    )
+  }
+
   return (
     <>
       <Header count={activeCount} />
       <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
-      <Todos todos={todos} changeDone={changeDone} deleteTodo={deleteTodo} />
+      <Todos
+        updateTodo={updateTodo}
+        todos={todos}
+        changeDone={changeDone}
+        deleteTodo={deleteTodo}
+      />
     </>
   )
 }

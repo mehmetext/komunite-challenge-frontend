@@ -7,9 +7,15 @@ type Props = {
   todos: ITodo[]
   changeDone: (id: string) => void
   deleteTodo: (id: string) => void
+  updateTodo: (id: string, text: string) => void
 }
 
-export default function Todos({ todos, changeDone, deleteTodo }: Props) {
+export default function Todos({
+  todos,
+  changeDone,
+  deleteTodo,
+  updateTodo,
+}: Props) {
   return (
     <div className="m-5 sm:mx-0">
       <div className="container mx-auto flex flex-col gap-4">
@@ -19,6 +25,7 @@ export default function Todos({ todos, changeDone, deleteTodo }: Props) {
             todo={todo}
             changeDone={changeDone}
             deleteTodo={deleteTodo}
+            updateTodo={updateTodo}
           />
         ))}
       </div>
