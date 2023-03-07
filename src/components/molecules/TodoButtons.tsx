@@ -1,5 +1,5 @@
 //Components
-import Button from "./Button"
+import Button from "../atoms/Button"
 
 //Types
 type Props = {

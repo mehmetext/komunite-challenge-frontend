@@ -1,5 +1,5 @@
 //Components
-import TodoButtons from "../atoms/TodoButtons"
+import TodoButtons from "./TodoButtons"
 import TodoDoneButton from "../atoms/TodoDoneButton"
 import TodoText from "../atoms/TodoText"
 import { ITodo } from "../templates/home"
