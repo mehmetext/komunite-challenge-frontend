@@ -50,11 +50,20 @@ export default function HomeTemplate({}: Props) {
     setTodo("")
   }
 
+  const changeDone = (id: string) => {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id == id) todo.done = !todo.done
+        return todo
+      })
+    )
+  }
+
   return (
     <>
       <Header count={activeCount} />
       <AddTodo todo={todo} setTodo={setTodo} addTodo={addTodo} />
-      <Todos todos={todos} />
+      <Todos todos={todos} changeDone={changeDone} />
     </>
   )
 }

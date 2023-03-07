@@ -7,12 +7,13 @@ import { ITodo } from "../templates/home"
 //Types
 type Props = {
   todo: ITodo
+  changeDone: (id: string) => void
 }
 
-export default function Todo({ todo }: Props) {
+export default function Todo({ todo, changeDone }: Props) {
   return (
     <div className="flex items-start p-4 bg-slate-700 rounded">
-      <TodoDoneButton done={todo.done} />
+      <TodoDoneButton id={todo.id} done={todo.done} changeDone={changeDone} />
       <TodoText text={todo.text} />
       <TodoButtons />
     </div>
